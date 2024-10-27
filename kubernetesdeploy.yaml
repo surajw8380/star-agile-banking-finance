@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: suraj-banking-deploy
+  labels:
+    app: banking
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: banking
+  template:
+    metadata:
+      labels:
+        app: banking
+    spec:
+      containers:
+      - name: suraj-javabanking-container
+        image: suraj838098/java-webapp:v1.0
+        ports:
+        - containerPort: 8082
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: suraj-banking-np-service
+  labels:
+    app: banking
+spec:
+  selector:
+    app: banking
+
+  type: NodePort
+  ports:
+  - nodePort: 31036
+    port: 8082
+    targetPort: 8082
