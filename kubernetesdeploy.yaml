@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: suraj-javabanking-container
-        image: suraj838098/java-webapp:v1.0
+        image: suraj838098/bank-webapp:v1.0
         ports:
         - containerPort: 8082
 ---
