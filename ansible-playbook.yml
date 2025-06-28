@@ -1,5 +1,5 @@
 - name : Deploying banking application
-  hosts : samplenode
+  hosts : samplenode1
   become: yes
   connection : ssh
   tasks : 
