@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: suraj-banking-deploy
+  name: suraj-banking-deploy1
   labels:
     app: banking
 spec:
